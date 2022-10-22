@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 09:58:25 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/10/12 12:39:10 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/10/21 04:49:10 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <iostream>
-# include <string>
-
+# include "utils.hpp"
+#ifndef CONRACT_HPP
+#define CONRACT_HPP
 class Contact
 {
 	public :
@@ -20,12 +20,13 @@ class Contact
 		~Contact();
 		Contact(const Contact &contact);
 		void		set_contact();
+		void		print_contact();
 		std::string	get_firstname();
 		std::string	get_lastname();
 		std::string	get_nickname();
 		std::string	get_number();
 		std::string	get_darkest_secret();
-		Contact	&operator=(const Contact& c1);
+		Contact	&operator=(const Contact &c1);
 		
 	private:
 		void		set_firstname();
@@ -39,3 +40,4 @@ class Contact
 		std::string	number;
 		std::string	darkest_secret;
 };
+#endif

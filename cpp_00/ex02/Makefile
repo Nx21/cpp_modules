@@ -5,25 +5,26 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/08/03 10:54:07 by nhanafi           #+#    #+#              #
-#    Updated: 2022/10/21 05:04:21 by nhanafi          ###   ########.fr        #
+#    Created: 2022/10/21 01:32:10 by nhanafi           #+#    #+#              #
+#    Updated: 2022/10/21 03:58:04 by nhanafi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 CC = c++
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98
-SRC = Contact.cpp PhoneBook.cpp main.cpp utils.cpp
-INC = Contact.hpp PhoneBook.hpp utils.hpp
+SRC = Account.cpp tests.cpp
+INC = Account.hpp
 OBJ = $(SRC:.cpp=.o)
-NAME = AwesomePhoneBook
+NAME = TheJobOfYourDreams
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@                      
 
-%.o:%.cpp $(INC)
-	$(CC) $(CFLAGS) -c $< -o $@
+%.o: %.cpp $(INC)
+	$(GCC) -c $< -o $@
 clean:
 	rm -rf $(OBJ)
 

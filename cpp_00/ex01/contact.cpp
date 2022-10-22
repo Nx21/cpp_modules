@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 03:14:09 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/10/12 12:39:01 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/10/21 04:59:41 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Contact.hpp"
 #include <limits>
 
 Contact::Contact()
@@ -81,7 +81,7 @@ void Contact::set_number()
     if(std::cin.fail())
         return;
     std::cout << "Phonenumber : ";
-    while(getline(std::cin, number ) && number.empty())
+    while(getline(std::cin, number ) && !isnumber(number))
         std::cout << "Try Again !! \nPhonenumber : ";
 }
 
@@ -94,6 +94,14 @@ void Contact::set_darkest_secret()
         std::cout << "Try Again !! \nDarkest Secret : ";
 }
 
+void Contact::print_contact()
+{
+    std::cout << "firstname: " << firstname << std::endl; 
+    std::cout << "lastname: " << lastname << std::endl; 
+    std::cout << "nickname: " << nickname << std::endl; 
+    std::cout << "number: " << number << std::endl; 
+    std::cout << "darkest_secret: " << darkest_secret << std::endl;
+}
 
 std::string Contact::get_firstname()
 {
@@ -119,7 +127,6 @@ std::string Contact::get_darkest_secret()
 {
     return darkest_secret;
 }
-
 
 Contact::Contact(const Contact &c1)
 {
