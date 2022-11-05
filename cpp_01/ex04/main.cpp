@@ -14,7 +14,7 @@
 
 int main()
 {
-    std::string filename, s1, s2;
+    std::string filename, s1, s2, str;
 
     std::cout << "name of the file: ";
     std::getline(std::cin, filename);
@@ -23,8 +23,23 @@ int main()
     std::cout << "second string: ";
     std::getline(std::cin, s2);
     if(!std::freopen(filename.c_str(), "r", stdin))
-        std::cerr << "error !\n";
+        std::cerr << "Error!\n";
     if(!std::freopen((filename + ".replace").c_str(), "w+", stdout))
-        std::cerr << "error replacefile!\n";
-    
+        std::cerr << "Error!\n";
+    while (std::getline(std::cin, str))
+    {
+        while (!str.empty())
+        {
+            int i = str.find(s1);
+            if (i == std::string::npos)
+            {
+                std::cout << str;
+                break;
+            }
+            std::cout << str.substr(0,i);
+            std::cout << s2;
+            str = str.substr(i + s1.length());
+        }
+        std::cout << std::endl;
+    }
 }

@@ -12,10 +12,9 @@
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
-SRC = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
-INC = HumanA.hpp HumanB.hpp Weapon.hpp
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
-NAME = UnnecessaryViolence
+NAME = Sedisforlosers
 all: $(NAME)
 
 $(NAME): $(OBJ)
