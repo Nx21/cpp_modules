@@ -6,23 +6,23 @@
 #    By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/23 22:47:45 by nhanafi           #+#    #+#              #
-#    Updated: 2022/11/21 21:30:18 by nhanafi          ###   ########.fr        #
+#    Updated: 2022/11/15 22:55:23 by nhanafi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
-SRC = Fixed.cpp  main.cpp
-INC = Fixed.hpp
+SRC = Harl.cpp  main.cpp
+INC = Harl.hpp
 OBJ = $(SRC:.cpp=.o)
-NAME = Fixed
+NAME = harlFilter
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
 
-%.o:%.cpp $(INC)
+%.o:%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

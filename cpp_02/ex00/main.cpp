@@ -5,30 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 04:10:01 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/23 01:05:29 by nhanafi          ###   ########.fr       */
+/*   Created: 2022/11/18 20:56:50 by nhanafi           #+#    #+#             */
+/*   Updated: 2022/11/19 02:31:16 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#include "Fixed.hpp"
 
-int main()
+int main( void ) 
 {
-    std::string cmd;
-    PhoneBook phonebook;
-    while (!std::cin.fail()) 
-    {
-        std::cout << "Enter ADD, SEARCH or EXIT: ";
-        getline(std::cin, cmd);
-        cmd = trim(cmd);
-        if (std::cin.fail() || cmd == "EXIT")
-            break;
-        if (cmd == "SEARCH")
-            phonebook.print_phonebook();
-        else if (cmd == "ADD")
-            phonebook.set_contact();
-        else
-            std::cout << "Try Again!!" << std::endl;
-    }
-    std::cout << "see you later\n";
+    Fixed a;
+    Fixed b( a );
+    Fixed c;
+    c = b;
+    std::cout << a.getRawBits() << std::endl;
+    std::cout << b.getRawBits() << std::endl;
+    std::cout << c.getRawBits() << std::endl;
+    return 0;
 }

@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nasreddine <nasreddine@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 00:36:52 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/18 00:54:54 by nhanafi          ###   ########.fr       */
+/*   Created: 2022/11/07 10:26:55 by nasreddine        #+#    #+#             */
+/*   Updated: 2022/11/07 17:41:47 by nasreddine       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
+
+#ifndef HARL_HPP
+#define HARL_HPP
 # include <iostream>
-class Weapon
+class Harl
 {
-	public :
-		Weapon();
-		Weapon(const std::string &s);
-		~Weapon();
-		Weapon(const Weapon &w);
-		void		setType(const std::string &s);
-		std::string	getType();
-		Weapon	&operator=(const Weapon &w);
-		
 	private:
-		std::string	type;
+		typedef void (Harl::*method_function)(void);
+		void	debug();
+		void	info();
+		void	warning();
+		void	error();
+		void	nothing();
+	public:
+		Harl();
+		~Harl();
+		void complain( std::string level );
 };
 #endif

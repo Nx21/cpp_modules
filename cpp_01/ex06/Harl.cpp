@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 10:25:07 by nasreddine        #+#    #+#             */
-/*   Updated: 2022/11/15 22:54:02 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/15 23:13:22 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,27 @@ void   Harl::nothing()
 
 void    Harl::complain(std::string level)
 {
-    const method_function func[4] = {
-                            &Harl::debug,
-                            &Harl::info,
-                            &Harl::warning,
-                            &Harl::error
-                            };
-    const std::string lvl[4] = {
-                            "DEBUG",
-                            "INFO",
-                            "WARNING",
-                            "ERROR"
-                            };
-    for (size_t i = 0; i < 4;i++)
-        level == lvl[i] ? ((this->*func[i])()) : (void)NULL;
+    // const method_function func[4] = {
+    //                         &Harl::debug,
+    //                         &Harl::info,
+    //                         &Harl::warning,
+    //                         &Harl::error
+    //                         };
+    // const std::string lvl[4] = {
+    //                         "DEBUG",
+    //                         "INFO",
+    //                         "WARNING",
+    //                         "ERROR"
+    //                         };
+    switch ((int)(level == "DEBUG"))
+    {
+        case 1:
+            std::cout << "here";
+            break;
+        
+        default:
+            break;
+    }
 }
 
 void    Harl::debug()

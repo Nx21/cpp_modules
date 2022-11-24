@@ -24,16 +24,19 @@ class Fixed
 		bool		operator>(Fixed const & rhs) const;
 		bool		operator<(Fixed const & rhs) const;
 		bool		operator==(Fixed const & rhs) const;
+		bool		operator!=(Fixed const & rhs) const;
 		Fixed		operator+(Fixed const & rhs) const;
 		Fixed		operator-(Fixed const & rhs) const;
 		Fixed		operator*(Fixed const & rhs) const;
 		Fixed		operator/(Fixed const & rhs) const;
-		Fixed		operator++(void);
+		Fixed		&operator++(void);
 		Fixed		operator++(int);
-		Fixed		operator--(void);
+		Fixed		&operator--(void);
 		Fixed		operator--(int);
 		static Fixed	max(Fixed const &F1, Fixed const &F2);
 		static Fixed	min(Fixed const &F1, Fixed const &F2);
+		static Fixed	max(Fixed &F1, Fixed &F2);
+		static Fixed	min(Fixed &F1, Fixed &F2);
 	private:
 		int					value;
 		static const int	fracBits = 8;

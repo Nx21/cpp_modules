@@ -6,20 +6,20 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 03:14:09 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/10/21 04:59:41 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/22 23:37:26 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include <limits>
 
-Contact::Contact()
+Contact::Contact(): firstname(""),
+    lastname(""),
+	nickname(""),
+	number(""),
+	darkest_secret("")
 {
-    firstname = "";
-	lastname = "";
-	nickname = "";
-	number = "";
-	darkest_secret = "";
+    
 }
 
 void Contact::set_contact()

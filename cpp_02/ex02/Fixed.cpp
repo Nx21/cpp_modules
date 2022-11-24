@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 00:40:32 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/21 01:51:09 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/23 23:07:19 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,11 @@ bool 		Fixed::operator==( Fixed const & rhs ) const
 	return (value == rhs.getRawBits());
 }
 
+bool 		Fixed::operator!=( Fixed const & rhs ) const
+{
+	return (value != rhs.getRawBits());
+}
+
 Fixed 		Fixed::operator+( Fixed const & rhs ) const
 {
 	Fixed	res;
@@ -121,7 +126,7 @@ Fixed 		Fixed::operator*( Fixed const & rhs ) const
 {
 	Fixed	res;
 
-	res.setRawBits((this->value * rhs.getRawBits()) >> res.fracBits);
+	res.setRawBits(((long long)this->value * rhs.getRawBits()) >> res.fracBits);
 	return res;
 }
 
@@ -129,7 +134,7 @@ Fixed 		Fixed::operator/( Fixed const & rhs ) const
 {
 	Fixed	res;
 
-	res.setRawBits((this->value << this->fracBits) / rhs.getRawBits());
+	res.setRawBits(((long long)this->value << this->fracBits) / rhs.getRawBits());
 	return res;
 }
 
@@ -149,13 +154,13 @@ Fixed		Fixed::operator--(int)
 	return res;
 }
 
-Fixed		Fixed::operator++(void)
+Fixed		&Fixed::operator++(void)
 {
 	this->value++;
 	return *this;
 }
 
-Fixed		Fixed::operator--(void)
+Fixed		&Fixed::operator--(void)
 {
 	this->value--;
 	return *this;
@@ -163,10 +168,20 @@ Fixed		Fixed::operator--(void)
 
 Fixed		Fixed::max(Fixed const &F1, Fixed const &F2)
 {
-	return F1 > F2 ? F1 : F2;
+	return F1 > F2 ? Fixed(F1) : Fixed(F2);
 }
 
 Fixed		Fixed::min(Fixed const &F1, Fixed const &F2)
+{
+	return F1 < F2 ? F1 : F2;
+}
+
+Fixed		Fixed::max(Fixed &F1, Fixed &F2)
+{
+	return F1 > F2 ? F1 : F2;
+}
+
+Fixed		Fixed::min(Fixed &F1, Fixed &F2)
 {
 	return F1 < F2 ? F1 : F2;
 }
