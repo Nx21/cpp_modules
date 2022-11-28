@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 00:21:57 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/10/26 02:24:26 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/26 22:31:53 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 HumanB::HumanB(const std::string &nam)
 {
     name = nam;
+    weapon = NULL;
 }
 
 HumanB::~HumanB()
@@ -46,6 +47,11 @@ HumanB  &HumanB::operator=(const HumanB &h)
 
 void    HumanB::attack()
 {
-    std::cout << name  << " attacks with their ";
-    std::cout << weapon->getType() << std::endl;
+    if (weapon)
+    {
+        std::cout << name  << " attacks with their ";
+        std::cout << weapon->getType() << std::endl;
+        return ;
+    }
+    std::cout << name  << " has no weapon"<< std::endl; 
 }

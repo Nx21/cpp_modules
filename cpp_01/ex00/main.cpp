@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 22:30:19 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/10/21 23:25:15 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/27 01:47:51 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int main()
     Zombie *z1;
 
     z1 = newZombie("bedro");
-    z1->announce();
     delete z1;
     randomChump("Mitirix");
 }

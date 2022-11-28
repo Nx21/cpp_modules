@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 00:36:52 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/18 00:54:54 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/26 22:36:57 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ class Weapon
 		Weapon(const std::string &s);
 		~Weapon();
 		Weapon(const Weapon &w);
-		void		setType(const std::string &s);
-		std::string	getType();
-		Weapon	&operator=(const Weapon &w);
+		void				setType(const std::string &s);
+		const std::string	&getType(void);
+		Weapon				&operator=(const Weapon &w);
 		
 	private:
-		std::string	type;
+		std::string			type;
 };
 #endif

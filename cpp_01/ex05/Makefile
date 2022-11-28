@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nasreddine <nasreddine@student.42.fr>      +#+  +:+       +#+         #
+#    By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/23 22:47:45 by nhanafi           #+#    #+#              #
-#    Updated: 2022/11/07 15:12:26 by nasreddine       ###   ########.fr        #
+#    Updated: 2022/11/25 04:39:39 by nhanafi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
 
-%.o:%.cpp
+%.o:%.cpp $(INC)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

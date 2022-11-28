@@ -6,7 +6,7 @@
 #    By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/23 22:47:45 by nhanafi           #+#    #+#              #
-#    Updated: 2022/11/15 22:55:23 by nhanafi          ###   ########.fr        #
+#    Updated: 2022/11/25 04:39:32 by nhanafi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
 
-%.o:%.cpp
+%.o:%.cpp $(INC)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 23:33:32 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/10/22 16:16:15 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/25 01:57:15 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ Zombie::Zombie(std::string s)
     name = s;
 }
 
-// Zombie::Zombie()
-// {
+Zombie::Zombie()
+{
 
-// }
+}
 
 Zombie::Zombie(const Zombie& zombie)
 {

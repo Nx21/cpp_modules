@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nasreddine <nasreddine@student.42.fr>      +#+  +:+       +#+        */
+/*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 11:50:39 by nasreddine        #+#    #+#             */
-/*   Updated: 2022/11/07 17:31:03 by nasreddine       ###   ########.fr       */
+/*   Updated: 2022/11/27 01:51:10 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main(void)
+#include "Harl.hpp"
+int main(int argc, char const *argv[])
 {
     Harl harl;
-    std::string s;
-    std::cin >> s;
-    harl.complain(s);
+    for (int i = 1; i < argc; i++)
+        harl.complain(argv[i]);
     return 0;
 }

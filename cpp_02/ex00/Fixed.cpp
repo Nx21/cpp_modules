@@ -6,13 +6,11 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 00:40:32 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/18 20:59:06 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/28 00:57:39 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-
 
 Fixed::Fixed()
 {
@@ -25,9 +23,6 @@ Fixed::Fixed( const Fixed & src )
 	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
 }
-
-
-
 
 Fixed::~Fixed()
 {

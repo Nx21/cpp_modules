@@ -1,49 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 19:20:48 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/26 22:37:45 by nhanafi          ###   ########.fr       */
+/*   Created: 2022/11/27 04:31:14 by nhanafi           #+#    #+#             */
+/*   Updated: 2022/11/27 04:39:12 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "Cat.hpp"
 
-Weapon::Weapon():type(NULL)
+Cat::Cat(): Animal("Cat")
+{
+}
+
+Cat::Cat( const Cat & src ): Animal(src)
 {
 	
 }
 
-Weapon::Weapon(const std::string &s):type(s)
+
+Cat::~Cat()
 {
-	
 }
 
-Weapon::Weapon(const Weapon &w)
-{
-	*this = w;
-}
 
-Weapon::~Weapon()
-{
-	std::cout << type << ": has been deleted" << std::endl;
-}
 
-Weapon &Weapon::operator=(const Weapon &w)
+Cat &				Cat::operator=( Cat const &rhs)
 {
-	this->type = w.type;
-	return (*this);
-}
-
-const std::string	&Weapon::getType(void)
-{
-	return type;
-}
-
-void	Weapon::setType(const std::string &s)
-{
-	this->type = s;
+	Cat *c = new Cat(rhs);
+	return *c;
 }

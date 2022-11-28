@@ -1,21 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 11:50:39 by nasreddine        #+#    #+#             */
-/*   Updated: 2022/11/25 04:30:02 by nhanafi          ###   ########.fr       */
+/*   Created: 2022/11/27 04:31:06 by nhanafi           #+#    #+#             */
+/*   Updated: 2022/11/27 04:31:07 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
-int main(int argc, char const *argv[])
-{
-    Harl harl;
-    if (argc > 1)
-        harl.complain(argv[1]);
-    return 0;
-}
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
+# include <iostream>
+# include <string>
+
+class Animal
+{
+
+	public:
+
+		Animal();
+		Animal( Animal const & src );
+		Animal(std::string const &t);
+		~Animal();
+		const std::string		&getType(void) const;
+		void					setType(std::string const &t);
+		Animal 					&operator=( Animal const & rhs );
+		void					makeSound(void);
+	private:
+		std::string type;
+
+};
+
+
+#endif

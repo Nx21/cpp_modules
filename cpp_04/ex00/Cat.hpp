@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 11:50:39 by nasreddine        #+#    #+#             */
-/*   Updated: 2022/11/25 04:30:02 by nhanafi          ###   ########.fr       */
+/*   Created: 2022/11/27 04:31:05 by nhanafi           #+#    #+#             */
+/*   Updated: 2022/11/27 04:40:41 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
-int main(int argc, char const *argv[])
-{
-    Harl harl;
-    if (argc > 1)
-        harl.complain(argv[1]);
-    return 0;
-}
+#ifndef CAT_HPP
+# define CAT_HPP
 
+# include "Animal.hpp"
+
+class Cat : public Animal
+{
+
+	public:
+
+		Cat();
+		Cat(Cat const & src);
+		~Cat();
+		Cat	&operator=( Cat const & rhs );
+	private:
+
+};
+#endif

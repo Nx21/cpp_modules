@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 04:18:37 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/22 02:11:44 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/28 01:52:33 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ Fixed				Point::get_Y() const
 
 Point &				Point::operator=(Point const &rhs)
 {
-	Point *p = new Point(rhs);
-	return *p ;
+	new(this) Point(rhs);
+	return *this;
 }
 
 int					Point::line_equa_sig(Point const a, Point const b, Point const x)
