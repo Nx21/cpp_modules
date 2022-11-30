@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 05:52:24 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/27 06:12:34 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/29 00:40:12 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,12 @@ void	ScavTrap::guardGate()
 
 ScavTrap &ScavTrap::operator=( ScavTrap const & rhs)
 {
-	ScavTrap *p = new ScavTrap(rhs);
-	return *p;
+	if ( this != &rhs )
+	{
+		this->hitPoint = rhs.hitPoint;
+		this->energyPoint = rhs.energyPoint;
+		this->attackDamage = rhs.attackDamage;
+		this->name = rhs.name;
+	}
+	return *this;
 }
-
-

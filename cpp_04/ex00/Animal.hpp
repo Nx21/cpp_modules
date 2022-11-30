@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 04:31:06 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/27 04:31:07 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/29 23:24:47 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ class Animal
 		Animal();
 		Animal( Animal const & src );
 		Animal(std::string const &t);
-		~Animal();
+		virtual ~Animal();
 		const std::string		&getType(void) const;
 		void					setType(std::string const &t);
 		Animal 					&operator=( Animal const & rhs );
-		void					makeSound(void);
-	private:
+		virtual void			makeSound(void) const;
+	protected:
 		std::string type;
 
 };

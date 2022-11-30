@@ -6,62 +6,38 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 04:31:18 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/27 04:31:19 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/29 23:04:32 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
 
 Dog::Dog()
 {
+	type = "Dog";
+	std::cout << "creat a Dog" << std::endl;
 }
 
-Dog::Dog( const Dog & src )
+Dog::Dog(const Dog &src): Animal(src)
 {
 }
-
-
-/*
-** -------------------------------- DESTRUCTOR --------------------------------
-*/
 
 Dog::~Dog()
 {
+	std::cout << "Dog died" << std::endl;
 }
 
 
-/*
-** --------------------------------- OVERLOAD ---------------------------------
-*/
 
-Dog &				Dog::operator=( Dog const & rhs )
+
+Dog 	&Dog::operator=(Dog const & rhs)
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	new (this) Dog(rhs);
 	return *this;
 }
 
-std::ostream &			operator<<( std::ostream & o, Dog const & i )
+void	Dog::makeSound(void) const
 {
-	//o << "Value = " << i.getValue();
-	return o;
+	std::cout << "This animal bark" << std::endl;
 }
-
-
-/*
-** --------------------------------- METHODS ----------------------------------
-*/
-
-
-/*
-** --------------------------------- ACCESSOR ---------------------------------
-*/
-
-
-/* ************************************************************************** */

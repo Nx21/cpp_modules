@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 04:31:05 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/27 04:40:41 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/29 22:55:34 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ class Cat : public Animal
 		Cat();
 		Cat(Cat const & src);
 		~Cat();
-		Cat	&operator=( Cat const & rhs );
+		Cat		&operator=( Cat const & rhs );
+		void	makeSound(void) const;
 	private:
 
 };

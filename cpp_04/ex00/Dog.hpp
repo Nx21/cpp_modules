@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 04:31:21 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/27 04:42:46 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/29 22:55:44 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 # include <iostream>
 # include <string>
+#include "Animal.hpp"
 
-class Dog
+class Dog : public Animal
 {
 
 	public:
@@ -24,7 +25,8 @@ class Dog
 		Dog();
 		Dog(Dog const & src );
 		~Dog();
-		Dog &operator=( Dog const & rhs );
+		Dog 	&operator=( Dog const & rhs );
+		void	makeSound(void) const;
 	private:
 
 };

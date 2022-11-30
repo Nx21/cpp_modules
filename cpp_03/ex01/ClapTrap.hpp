@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:33:07 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/27 05:49:43 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/29 01:27:40 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class ClapTrap
 		void			attack(const std::string& target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
+		void			info();
 	protected:
 		std::string	name;
 		unsigned int	hitPoint;

@@ -6,15 +6,15 @@
 #    By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/23 22:47:45 by nhanafi           #+#    #+#              #
-#    Updated: 2022/11/24 21:23:25 by nhanafi          ###   ########.fr        #
+#    Updated: 2022/11/28 22:13:19 by nhanafi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
-SRC = ClapTrap.cpp ScavTrap.cpp main.cpp
-INC = ClapTrap.hpp ScavTrap.hpp
+SRC = ClapTrap.cpp FragTrap.cpp ScavTrap.cpp main.cpp
+INC = ClapTrap.hpp FragTrap.hpp ScavTrap.hpp
 OBJ = $(SRC:.cpp=.o)
 NAME = Serena  
 all: $(NAME)

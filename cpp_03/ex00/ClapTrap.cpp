@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:33:09 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/27 05:46:18 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/11/29 03:02:53 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,13 @@ void		ClapTrap::beRepaired(unsigned int amount)
 		std::cout << " doesn\'t have enough hit point" << std::endl;
 	else if (!this->energyPoint)
 		std::cout << " doesn\'t have enough energy point" << std::endl;
+}
+
+void		ClapTrap::info()
+{
+	std::cout << "INFO :" << std::endl;
+	std::cout << "\tname :" << name << std::endl;
+	std::cout << "\tattackDamage :" << attackDamage << std::endl;
+	std::cout << "\tenergyPoint :" << energyPoint << std::endl;
+	std::cout << "\thitPoint :" << hitPoint << std::endl;
 }
