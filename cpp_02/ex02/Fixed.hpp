@@ -6,19 +6,17 @@
 
 class Fixed
 {
-
 	public:
-
 		Fixed();
 		Fixed(Fixed const &src);
 		Fixed(const float f);
 		Fixed(const int n);
 		~Fixed();
-		int getRawBits( void ) const;	
-		void setRawBits( int const raw );
+		int 		getRawBits( void ) const;	
+		void		setRawBits( int const raw );
 		Fixed 		&operator=(Fixed const & rhs);
-		float toFloat( void ) const;
-		int toInt( void ) const;
+		float		toFloat( void ) const;
+		int			toInt( void ) const;
 		bool 		operator>=(Fixed const & rhs) const;
 		bool		operator<=(Fixed const & rhs) const;
 		bool		operator>(Fixed const & rhs) const;

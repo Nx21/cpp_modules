@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 00:40:32 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/23 23:07:19 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/01 23:37:57 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,7 @@ Fixed	&Fixed::operator=( Fixed const & rhs )
 	return *this;
 }
 
-std::ostream &operator<<( std::ostream &o, Fixed const &F)
-{
-	o << F.toFloat();
-	return o;
-}
+
 
 bool 		Fixed::operator>=( Fixed const & rhs) const
 {
