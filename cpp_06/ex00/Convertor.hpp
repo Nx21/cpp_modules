@@ -10,12 +10,19 @@ class Convertor
 	public:
 
 		Convertor();
+		Convertor(std::string s);
 		Convertor( Convertor const & src );
 		~Convertor();
-
+		void convert(std::string input);
 		Convertor &		operator=( Convertor const & rhs );
-
+		typedef struct s_pair
+		{
+			std::string key;
+			double		val;
+		} t_pair;
 	private:
+		std::string _str;
+		double		_double;
 
 };
 
