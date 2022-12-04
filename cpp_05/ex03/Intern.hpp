@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 06:04:44 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 22:13:47 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 23:48:33 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <string>
-# include "AForm.hpp"
+# include "Form.hpp"
 # include "ShrubberyCreationForm.hpp"
 # include "PresidentialPardonForm.hpp"
 # include "RobotomyRequestForm.hpp"
@@ -28,12 +28,12 @@ class Intern
 		Intern();
 		Intern( const Intern & src );
 		~Intern();
-		AForm	*makeForm(std::string const &formName, std::string const &target); 
+		Form	*makeForm(std::string const &formName, std::string const &target); 
 		Intern &operator=(Intern const & rhs);
-		typedef AForm *(Intern::*formFunction)(std::string const &target);
-		AForm				*makeRobotomy(std::string const &target);
-		AForm				*makePresidential(std::string const &target);
-		AForm				*makeShrubbery(std::string const &target);
+		typedef Form *(Intern::*formFunction)(std::string const &target);
+		Form				*makeRobotomy(std::string const &target);
+		Form				*makePresidential(std::string const &target);
+		Form				*makeShrubbery(std::string const &target);
 		typedef struct s_form
 		{
 			formFunction	form;

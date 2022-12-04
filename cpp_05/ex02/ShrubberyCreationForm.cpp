@@ -6,22 +6,22 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 02:31:33 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 05:59:25 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 23:25:47 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm():AForm("UNKOWN", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm():Form("UNKOWN", 145, 137)
 {
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string const &target):AForm(target, 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string const &target):Form(target, 145, 137)
 {
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm & src ):AForm(src)
+ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm & src ):Form(src)
 {
 }
 

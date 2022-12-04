@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 03:25:16 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 00:51:56 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 23:56:52 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ Bureaucrat::Bureaucrat( const Bureaucrat & src ): _name(src._name)
 
 Bureaucrat::~Bureaucrat()
 {
+	std::cout << "deconstractor called" << std::endl;
 }
 
 

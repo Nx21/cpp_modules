@@ -6,16 +6,16 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 02:10:45 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 05:59:02 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 23:25:32 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRESIDENTIALPARDONFORM_HPP
 # define PRESIDENTIALPARDONFORM_HPP
 
-# include "AForm.hpp"
+# include "Form.hpp"
 
-class PresidentialPardonForm : public AForm
+class PresidentialPardonForm : public Form
 {
 
 	public:

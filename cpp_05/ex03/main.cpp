@@ -6,33 +6,86 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 20:56:50 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 05:09:51 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 23:58:23 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "AForm.hpp"
+#include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "Intern.hpp"
 
 int main( void ) 
 {
     srand(time(0));
-    Bureaucrat a("nasr");
-    a.setGrade(15);
-    try
+    Intern  intern;
     {
-        a.increment();
+        Bureaucrat bureaucrat("nasr");
+        bureaucrat.setGrade(15);
+        try
+        {
+            Form *form = intern.makeForm("shrubbery request", "1st_file");  
+            std::cout << bureaucrat << *form;
+            bureaucrat.signForm(*form); 
+            bureaucrat.executeForm(*form);
+            delete form;
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
     }
-    catch(std::exception& e)
+    std::cout << std::endl << std::endl;
     {
-        std::cerr << e.what() << '\n';
+       Bureaucrat bureaucrat("nasr");
+        bureaucrat.setGrade(15);
+        try
+        {
+            Form *form = intern.makeForm("presidential request", "2nd_file");  
+            std::cout << bureaucrat << *form;
+            bureaucrat.signForm(*form); 
+            bureaucrat.executeForm(*form);
+            delete form;
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
     }
-    std::cout << a;
-    AForm    *form = new ShrubberyCreationForm("hi");
-    a.signForm(*form); 
-    form->execute(a);
-    std::cout << *form;
-    return 0;
+    std::cout << std::endl << std::endl;
+    {
+        Bureaucrat bureaucrat("nasr");
+        bureaucrat.setGrade(15);
+        try
+        {
+            Form *form = intern.makeForm("robotomy request", "3th_file");  
+            std::cout << bureaucrat << *form;
+            bureaucrat.signForm(*form); 
+            bureaucrat.executeForm(*form);
+            delete form;
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
+    }
+    std::cout << std::endl << std::endl;
+    {
+        Bureaucrat bureaucrat("nasr");
+        bureaucrat.setGrade(15);
+        try
+        {
+            Form *form = intern.makeForm("robotaaaaasfomy request", "4th_file");  
+            std::cout << bureaucrat << *form;
+            bureaucrat.signForm(*form); 
+            bureaucrat.executeForm(*form);
+            delete form;
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
+    }
 }

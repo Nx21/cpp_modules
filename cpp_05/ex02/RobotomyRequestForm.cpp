@@ -6,22 +6,22 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 02:18:25 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 05:59:18 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 23:25:37 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 #include <cstdlib>
 
-RobotomyRequestForm::RobotomyRequestForm():AForm("UNKOWN", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm():Form("UNKOWN", 72, 45)
 {
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string const &target):AForm(target, 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(std::string const &target):Form(target, 72, 45)
 {
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm & src):AForm(src)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm & src):Form(src)
 {
 }
 

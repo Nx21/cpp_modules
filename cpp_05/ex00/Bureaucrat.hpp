@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 03:25:21 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/02 04:28:09 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 22:53:19 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,11 @@ class Bureaucrat
 		class GradeTooHighException : public std::exception
 		{
 			public :
-				GradeTooHighException();
-				~GradeTooHighException();
 				const char* what() const throw();
 		};
 		class GradeTooLowException : public std::exception
 		{
 			public :
-				GradeTooLowException();
-				~GradeTooLowException();
 				const char* what() const throw();
 		};
 		

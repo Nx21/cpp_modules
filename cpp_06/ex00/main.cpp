@@ -5,30 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 20:56:50 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 23:10:53 by nhanafi          ###   ########.fr       */
+/*   Created: 2022/12/04 00:22:24 by nhanafi           #+#    #+#             */
+/*   Updated: 2022/12/04 01:19:52 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
-#include <iostream>
-int main( void ) 
+#include "Convertor.hpp"
+
+int main(int argc, char const *argv[])
 {
-    Form    form("1337form", 10, 20);
-    Bureaucrat a("nasr");
-    std::cout << form;
-    a.setGrade(11);
-    a.signForm(form);
-    try
+    if(argc != 2)
     {
-        a.increment();
-        std::cout << a;
+        std::cout << "Invalid arguments" << std::endl;
+        return 1;
     }
-    catch(std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    a.signForm(form); 
-    return 0;
+    std::string arg(argv[1]);
+    if (arg.size() == 1 && !std::isdigit(arg[0])
+        std::cout << "";
+        
 }

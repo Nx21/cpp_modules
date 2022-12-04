@@ -6,12 +6,12 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 03:25:16 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 05:59:46 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 23:56:22 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "AForm.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat(): _name("UNKNOWN"),_grade(150)
 {
@@ -39,6 +39,7 @@ Bureaucrat::Bureaucrat( const Bureaucrat & src ): _name(src._name)
 
 Bureaucrat::~Bureaucrat()
 {
+	std::cout << "deconstractor called" << std::endl;
 }
 
 
@@ -101,7 +102,7 @@ std::ostream	&operator<<( std::ostream &o, Bureaucrat const &bureaucrat)
 	return o;
 }
 
-void			Bureaucrat::signForm(AForm &form) const
+void			Bureaucrat::signForm(Form &form) const
 {
 	try
 	{
@@ -117,7 +118,7 @@ void			Bureaucrat::signForm(AForm &form) const
 }
 
 
-void			Bureaucrat::executeForm(AForm const & form)
+void			Bureaucrat::executeForm(Form const & form)
 {
 	try
 	{

@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 06:04:42 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 22:15:36 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 23:48:27 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,22 @@ Intern::~Intern()
 {
 }
 
-AForm   *Intern::makeShrubbery(std::string const &target)
+Form   *Intern::makeShrubbery(std::string const &target)
 {
     return (new ShrubberyCreationForm(target));
 }
 
-AForm   *Intern::makeRobotomy(std::string const &target)
+Form   *Intern::makeRobotomy(std::string const &target)
 {
     return (new RobotomyRequestForm(target));
 }
 
-AForm   *Intern::makePresidential(std::string const &target)
+Form   *Intern::makePresidential(std::string const &target)
 {
     return (new PresidentialPardonForm(target));
 }
 
-AForm	*Intern::makeForm(std::string const &formName, std::string const &target)
+Form	*Intern::makeForm(std::string const &formName, std::string const &target)
 {
     const t_form arrForm[3] = {
                             {&Intern::makeRobotomy,"robotomy request"},

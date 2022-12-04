@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 03:25:16 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/02 04:28:47 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 22:54:08 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ Bureaucrat::Bureaucrat( const Bureaucrat & src ): _name(src._name)
 
 Bureaucrat::~Bureaucrat()
 {
+	std::cout << "deconstractor called" << std::endl;
 }
 
 
@@ -101,32 +102,9 @@ std::ostream &operator<<( std::ostream &o, Bureaucrat const &bureaucrat)
 	return o;
 }
 
-Bureaucrat::GradeTooHighException::GradeTooHighException()
-{
-	
-}
-
-Bureaucrat::GradeTooHighException::~GradeTooHighException()
-{
-	
-}
-
 const char	*Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return "the grade is too high";
-}
-
-
-
-
-Bureaucrat::GradeTooLowException::GradeTooLowException()
-{
-	
-}
-
-Bureaucrat::GradeTooLowException::~GradeTooLowException()
-{
-	
 }
 
 const char	*Bureaucrat::GradeTooLowException::what() const throw()

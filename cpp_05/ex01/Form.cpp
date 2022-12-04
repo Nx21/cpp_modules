@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 03:26:20 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 00:55:33 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 23:11:23 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,8 @@ Form &				Form::operator=( Form const & rhs )
 std::ostream &			operator<<( std::ostream & o, Form const & form )
 {
 	o << "the form " << form.getName();
-	o << ", with required grade" << form.getGradeSigne() << " to sign it";
-	o << ", with required grade" << form.getGradeExecute() << " to execute it, ";
+	o << ", with required grade " << form.getGradeSigne() << " to sign it";
+	o << ", with required grade " << form.getGradeExecute() << " to execute it, ";
 	o << (form.isSigned() ? "is signed" : "is not signed") << std::endl;
 	return o;
 }
@@ -88,10 +88,7 @@ std::ostream &			operator<<( std::ostream & o, Form const & form )
 void		Form::beSigned(Bureaucrat const &bureaucrat)
 {
 	if (bureaucrat.getGrade() > _gradeSigned)
-	{
-		std::cout << "here\n";
 		throw GradeTooLowException();
-	}
 	_signed = true;
 }
 

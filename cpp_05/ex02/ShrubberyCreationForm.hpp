@@ -6,16 +6,16 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 03:33:36 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 05:59:29 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/03 23:25:51 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SHRUBBERYCREATIONFORM_HPP
 # define SHRUBBERYCREATIONFORM_HPP
 
-# include "AForm.hpp"
+# include "Form.hpp"
 
-class ShrubberyCreationForm: public AForm
+class ShrubberyCreationForm: public Form
 {
 
 	public:
