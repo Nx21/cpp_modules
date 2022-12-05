@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 22:51:03 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/02 23:43:54 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/05 03:31:02 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,16 @@ int main()
 	{
 		Dog baseDog;
 		{
-			Dog tmpDog = baseDog;
+			Dog tmpDog;
+			tmpDog = baseDog;
 		}
 	}
 		std::cout << std::endl << std::endl;
-	{	
-		Cat baseCat;
-		{
-			Cat tmpCat = baseCat;
-		}
-	}
+	while(1);
+	// {	
+	// 	Cat baseCat;
+	// 	{
+	// 		Cat tmpCat = baseCat;
+	// 	}
+	// }
 }

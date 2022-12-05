@@ -14,15 +14,17 @@ class Convertor
 		Convertor( Convertor const & src );
 		~Convertor();
 		void convert(std::string input);
-		Convertor &		operator=( Convertor const & rhs );
-		typedef struct s_pair
-		{
-			std::string key;
-			double		val;
-		} t_pair;
+		Convertor	&operator=( Convertor const & rhs );
+		void		printUndefine(std::string input);
+		void		printChar(std::string input);
+		void		printdouble(std::string input);
+		void		printint(std::string input);
+		void		printerror();
 	private:
 		std::string _str;
 		double		_double;
+		int			_int;
+		char		_char;
 
 };
 

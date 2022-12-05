@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 04:31:18 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/11/30 09:31:22 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/05 03:32:10 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ Dog::Dog()
 Dog::Dog(const Dog &src)
 {
 	type = src.type;
+	if (brain)
+		delete brain;
 	brain = new Brain(*src.brain);
 }
 
