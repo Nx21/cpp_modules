@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 03:08:07 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/05 04:51:54 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/05 21:46:14 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,17 @@ class FtString
 		operator float() const;
 		operator char() const;
 		FtString &		operator=( FtString const & rhs );
-		class TooBigNumber
+		class TooBigNumber : public std::exception
 		{
 			public :
 				const char* what() const throw();
 		};
-		class TooSmallNumber
+		class TooSmallNumber : public std::exception
 		{
 			public :
 				const char* what() const throw();
 		};
-		class IndefindNumber
+		class IndefindNumber : public std::exception
 		{
 			public :
 				const char* what() const throw();

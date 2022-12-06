@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 03:06:29 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/05 04:58:43 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/05 21:46:52 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,17 +93,10 @@ FtString::operator float() const
 
 FtString::operator int() const
 {
-	// if (_string.size() == 1 && !std::isdigit(_string[0]))
-	// 	return int(_string[0]);
-	try
-	{
-		double tmp = double(*this);
-		(void)tmp;
-	}
-	catch(const std::exception& e)
-	{
-		throw e;
-	}
+	if (_string.size() == 1 && !std::isdigit(_string[0]))
+		return _string[0];
+	double tmp = double(*this);
+	(void)tmp;
 	return stoi(_string);
 }
 
@@ -145,8 +138,8 @@ std::ostream	&operator<<( std::ostream & o, FtString const & _String)
 {
 	char	_char;
 	int		_int = 0;
-	// float	_float;
-	// double	_double;
+	float	_float = 0;
+	double	_double = 0;
 	
 	try
 	{

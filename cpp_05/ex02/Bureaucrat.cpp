@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 03:25:16 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/03 23:56:43 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/05 23:09:57 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,6 @@ void			Bureaucrat::signForm(Form &form) const
 		std::cout << _name << "  couldn’t sign " << form.getName();
 		std::cerr << " because " << e.what() << '\n';
 	}
-	
 }
 
 
