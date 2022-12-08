@@ -5,43 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 22:14:15 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/07 08:44:26 by nhanafi          ###   ########.fr       */
+/*   Created: 2022/12/06 17:59:09 by nhanafi           #+#    #+#             */
+/*   Updated: 2022/12/06 17:59:26 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serialize.hpp"
-#include <cstdlib>
-
-void printdata(Data *data)
-{
-    std::cout << data->first << " ";
-    std::cout << data->second << " ";
-    std::cout << data->third << std::endl;
-}
-uintptr_t foo()
-{
-    Data    *p;
-    
-    p = new Data;
-    p->first = rand();
-    p->second = rand();
-    p->third = rand();
-    printdata(p);
-    return serialize(p);
-}
-
+#include "Span.hpp"
 
 int main()
 {
-    Data    *data;
-
-    srand(time(0));
-    data = deserialize(foo());
-    printdata(data);
-    delete data;
-    data = deserialize(foo());
-    printdata(data);
-    delete data;
+    Span sp = Span(5);
+    sp.addNumber(6);
+    sp.addNumber(3);
+    sp.addNumber(17);
+    sp.addNumber(9);
+    sp.addNumber(11);
+    std::cout << sp.shortestSpan() << std::endl;
+    std::cout << sp.longestSpan() << std::endl;
     return 0;
 }

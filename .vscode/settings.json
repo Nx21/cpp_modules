@@ -61,6 +61,10 @@
         "__functional_base_03": "cpp",
         "filesystem": "cpp",
         "*.tpp": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "set": "cpp",
+        "__node_handle": "cpp",
+        "__tree": "cpp",
+        "optional": "cpp"
     }
 }

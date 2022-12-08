@@ -5,43 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 22:14:15 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/07 08:44:26 by nhanafi          ###   ########.fr       */
+/*   Created: 2022/12/07 11:51:14 by nhanafi           #+#    #+#             */
+/*   Updated: 2022/12/08 03:30:56 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serialize.hpp"
-#include <cstdlib>
-
-void printdata(Data *data)
-{
-    std::cout << data->first << " ";
-    std::cout << data->second << " ";
-    std::cout << data->third << std::endl;
-}
-uintptr_t foo()
-{
-    Data    *p;
-    
-    p = new Data;
-    p->first = rand();
-    p->second = rand();
-    p->third = rand();
-    printdata(p);
-    return serialize(p);
-}
-
+#include "MutantStack.hpp"
 
 int main()
 {
-    Data    *data;
-
-    srand(time(0));
-    data = deserialize(foo());
-    printdata(data);
-    delete data;
-    data = deserialize(foo());
-    printdata(data);
-    delete data;
+    MutantStack<int> mstack;
+    mstack.push(5);
+    mstack.push(17);
+    std::cout << mstack.top() << std::endl;
+    mstack.pop();
+    std::cout << mstack.size() << std::endl;
+    mstack.push(3);
+    mstack.push(5);
+    mstack.push(737);
+    // //[...]
+    mstack.push(0);
+    MutantStack<int> mstack1 = mstack;
+    MutantStack<int>::iterator it = mstack1.begin();
+    MutantStack<int>::iterator ite = mstack1.end();
+    ++it;
+    --it;
+    while (it != ite)
+    {
+    std::cout << *it << std::endl;
+    ++it;
+    }
+    std::stack<int> s(mstack);
     return 0;
 }
