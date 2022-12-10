@@ -6,7 +6,7 @@
 /*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 04:48:25 by nhanafi           #+#    #+#             */
-/*   Updated: 2022/12/06 16:48:11 by nhanafi          ###   ########.fr       */
+/*   Updated: 2022/12/08 04:20:01 by nhanafi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@ int main()
 {
     std::vector<int> arr(15);
     arr[5] = 10;
-    std::cout << *easyfind(arr, 10) << std::endl;
-    // arr.find(11);
+    try
+    {
+        std::cout << *easyfind(arr, 11) << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 }

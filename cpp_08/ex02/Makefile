@@ -6,16 +6,16 @@
 #    By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 00:24:48 by nhanafi           #+#    #+#              #
-#    Updated: 2022/12/08 04:13:04 by nhanafi          ###   ########.fr        #
+#    Updated: 2022/12/08 03:47:17 by nhanafi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 SRC = main.cpp
-INC = easyfind.hpp
+INC = MutantStack.hpp
 OBJ = $(SRC:.cpp=.o)
-NAME = Array
+NAME = MutantStack
 all: $(NAME)
 
 $(NAME): $(OBJ)

@@ -6,7 +6,7 @@
 #    By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 00:24:48 by nhanafi           #+#    #+#              #
-#    Updated: 2022/12/06 17:59:50 by nhanafi          ###   ########.fr        #
+#    Updated: 2022/12/08 06:04:24 by nhanafi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CFLAGS = -Wall -Werror -Wextra -std=c++98
 SRC = main.cpp Span.cpp
 INC = Span.hpp 
 OBJ = $(SRC:.cpp=.o)
-NAME = Array
+NAME = Span
 all: $(NAME)
 
 $(NAME): $(OBJ)
